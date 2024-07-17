@@ -20,12 +20,12 @@ func APIResponse(message string, code int, status string, data interface{}) Resp
 		Status:  status,
 	}
 
-	jsonresponse := Response{
+	jsonResponse := Response{
 		Meta: meta,
 		Data: data,
 	}
 
-	return jsonresponse
+	return jsonResponse
 }
 
 func FormatValidationError(err error) []string {
