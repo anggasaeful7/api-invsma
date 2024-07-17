@@ -7,6 +7,9 @@ type User struct {
 	Name           string
 	Occupation     string
 	Email          string
+	Nik            string
+	Nohp           string
+	Npwp           string
 	PasswordHash   string
 	AvatarFileName string
 	Role           string

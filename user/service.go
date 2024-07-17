@@ -28,7 +28,9 @@ func (s *service) RegisterUser(input RegisterUserInput) (User, error) {
 	user := User{}
 	user.Name = input.Name
 	user.Email = input.Email
-	user.Occupation = input.Occupation
+	user.Nik = input.Nik
+	user.Nohp = input.Nohp
+	user.Npwp = input.Npwp
 
 	passwordHash, err := bcrypt.GenerateFromPassword([]byte(input.Password), bcrypt.MinCost)
 	if err != nil {
@@ -128,7 +130,9 @@ func (s *service) UpdateUser(input FormUpdateUserInput) (User, error) {
 
 	user.Name = input.Name
 	user.Email = input.Email
-	user.Occupation = input.Occupation
+	user.Nik = input.Nik
+	user.Nohp = input.Nohp
+	user.Npwp = input.Npwp
 
 	updatedUser, err := s.repository.Update(user)
 	if err != nil {
